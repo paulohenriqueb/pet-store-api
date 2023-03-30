@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::ApiResource('pet', 'PetController');
+Route::ApiResource('tipo-servico', 'TipoServicoController');
