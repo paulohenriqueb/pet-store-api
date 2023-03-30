@@ -32,7 +32,6 @@ class PetController extends Controller
     public function store(Request $request)
     {
         $request->validate($this->pet->rules());
-        dd($request->all());
         $pet = $this->pet;
         $pet->create($request->all());
         return response()->json($pet, 201);
