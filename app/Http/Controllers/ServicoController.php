@@ -33,8 +33,8 @@ class ServicoController extends Controller
     {
         $servico = $this->servico;
         $request->validate($servico->rules());
-        $servico->create($request->all());
-        return response()->json($servico, 201);
+
+        return response()->json($servico::create($request->all()), 201);
     }
 
     /**

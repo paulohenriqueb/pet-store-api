@@ -31,8 +31,8 @@ class TipoServicoController extends Controller
     {
         $tipoServico = $this->tipoServico;
         $request->validate($tipoServico->rules());
-        $tipoServico->create($request->all());
-        return response()->json($tipoServico, 201);
+
+        return response()->json($tipoServico::create($request->all()), 201);
 
     }
 
